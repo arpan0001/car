@@ -8,54 +8,48 @@ public class inputManager : MonoBehaviour {
     [HideInInspector] public float horizontal;
     [HideInInspector] public bool handbrake;
     [HideInInspector] public bool boosting;
+    [HideInInspector] public bool brake; // Added brake variable
 
     // AI components
-
     private trackWaypoints waypoints;
     private Transform currentWaypoint;
-    private List<Transform> nodes = new List<Transform> ();
+    private List<Transform> nodes = new List<Transform>();
     private int distanceOffset = 5;
     private float sterrForce = 1;
     [Header("AI acceleration value")]
-    [Range(0,1)]public float acceleration = 0.5f;
+    [Range(0, 1)] public float acceleration = 0.5f;
     public int currentNode;
-
 
     private void Start() {
         waypoints = GameObject.FindGameObjectWithTag("path").GetComponent<trackWaypoints>();
         currentWaypoint = gameObject.transform;
         nodes = waypoints.nodes;
-        
-        //print(gameObject.name + "offset distance " + distanceOffset + "steer force = " + sterrForce + "acc " + acceleration);
     }
 
-    private void FixedUpdate () {
-
-        if (gameObject.tag == "AI") AIDrive ();
-        else if (gameObject.tag == "Player"){
+    private void FixedUpdate() {
+        if (gameObject.tag == "AI") AIDrive();
+        else if (gameObject.tag == "Player") {
             calculateDistanceOfWaypoints();
-            keyboard ();
-        } 
-
+            keyboard();
+        }
     }
 
-    private void keyboard () {
-        vertical = Input.GetAxis ("Vertical");
-        horizontal = Input.GetAxis ("Horizontal");
-        handbrake = (Input.GetAxis ("Jump") != 0) ? true : false;
-        if (Input.GetKey (KeyCode.LeftShift)) boosting = true;
+    private void keyboard() {
+        vertical = SimpleInput.GetAxis("Vertical");
+        horizontal = SimpleInput.GetAxis("Horizontal");
+        handbrake = (Input.GetAxis("Jump") != 0) ? true : false;
+        if (Input.GetKey(KeyCode.LeftShift)) boosting = true;
         else boosting = false;
-
+        brake = Input.GetKey(KeyCode.Space); // Capture brake input
     }
 
-    private void AIDrive () {
-        calculateDistanceOfWaypoints ();
-        AISteer ();
+    private void AIDrive() {
+        calculateDistanceOfWaypoints();
+        AISteer();
         vertical = acceleration;
-
     }
 
-    private void calculateDistanceOfWaypoints () {
+    private void calculateDistanceOfWaypoints() {
         Vector3 position = gameObject.transform.position;
         float distance = Mathf.Infinity;
 
@@ -72,18 +66,12 @@ public class inputManager : MonoBehaviour {
                 }
                 currentNode = i;
             }
-            
         }
-        
     }
 
-    private void AISteer () {
-
-        Vector3 relative = transform.InverseTransformPoint (currentWaypoint.transform.position);
+    private void AISteer() {
+        Vector3 relative = transform.InverseTransformPoint(currentWaypoint.transform.position);
         relative /= relative.magnitude;
-
         horizontal = (relative.x / relative.magnitude) * sterrForce;
-
     }
-
 }
