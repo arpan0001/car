@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Assets 1/Scenes/awakeScene.unity
+    guid: 69160dfbc3e10454fac39b45a5c98850
+  - enabled: 1
+    path: Assets/Assets 1/Scenes/map selection.unity
+    guid: 0772a6f0a29003946a839ad50e1b0b90
+  - enabled: 1
+    path: Assets/map prefab/superMarioMap.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/map prefab/BRAZIL.unity
+    guid: 13ace63936138c3449c8ea73be83394c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 00cc2f2bdedea814f9d2e3d685a9cb71,
       type: 2}
