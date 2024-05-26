@@ -2,6 +2,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Photon.Pun;
 
 public class CarController : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class CarController : MonoBehaviour
     // Wheels
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
+
+    PhotonView view;
 
     private void FixedUpdate() {
         GetInput();
