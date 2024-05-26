@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Assets 1/Scenes/MainMenu.unity
+    guid: 52ce182d2af4f48478b08e9a9788d7e5
+  - enabled: 1
     path: Assets/Assets 1/Scenes/Loading.unity
     guid: e1d6f8091f7cbc04d8b7084bf9d81883
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets 1/Scenes/ComunityMap.unity
     guid: 39dd73fe576aa7f46b6735a5fa664b0e
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Assets 1/Scenes/awakeScene.unity
     guid: 69160dfbc3e10454fac39b45a5c98850
@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/map prefab/superMarioMap.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/map prefab/BRAZIL.unity
     guid: 13ace63936138c3449c8ea73be83394c
   m_configObjects:
