@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Photon.Pun;
 
 public class controller : MonoBehaviour
 {
@@ -53,7 +52,7 @@ public class controller : MonoBehaviour
     private float radius = 6, brakPower = 0, DownForceValue = 10f,wheelsRPM ,driftFactor, lastValue ,horizontal , vertical,totalPower;
     private bool flag=false;
 
-    PhotonView view;
+    
 
 
 
@@ -66,16 +65,11 @@ public class controller : MonoBehaviour
 
     }
 
-    private void Start()
-    {
-        view = GetComponent<PhotonView>();
-    }
+    
     private void Update() {
 
         if(SceneManager.GetActiveScene().name == "awakeScene")return;
 
-        if (view.IsMine)
-        {
             horizontal = IM.horizontal;
             vertical = IM.vertical;
 
@@ -91,9 +85,6 @@ public class controller : MonoBehaviour
             if (gameObject.tag == "AI") return;
             adjustTraction();
             activateNitrus();
-        }
-
-        
     }
 
     private void calculateEnginePower(){

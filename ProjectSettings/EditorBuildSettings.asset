@@ -21,14 +21,23 @@ EditorBuildSettings:
     path: Assets/Assets 1/Scenes/awakeScene.unity
     guid: 69160dfbc3e10454fac39b45a5c98850
   - enabled: 1
-    path: Assets/Assets 1/Scenes/map selection.unity
-    guid: 0772a6f0a29003946a839ad50e1b0b90
+    path: Assets/Assets 1/Scenes/Map Selection.unity
+    guid: 466eaf2b3c77ab84eabe57ef5c661114
   - enabled: 1
-    path: Assets/map prefab/superMarioMap.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/map prefab/superMarioMap 6.unity
+    guid: 55c0407b9f053004693bb68dfb936d80
   - enabled: 1
     path: Assets/map prefab/BRAZIL.unity
     guid: 13ace63936138c3449c8ea73be83394c
+  - enabled: 1
+    path: Assets/Assets 1/Scenes/Map Selection.unity
+    guid: 466eaf2b3c77ab84eabe57ef5c661114
+  - enabled: 1
+    path: Assets/map prefab/INDIA.unity
+    guid: ca4b3ef8804db4b40a23b13c26747bab
+  - enabled: 1
+    path: Assets/map prefab/dubai.unity
+    guid: f9a6140057900dd4cb7bf2a4633adca6
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 00cc2f2bdedea814f9d2e3d685a9cb71,
       type: 2}

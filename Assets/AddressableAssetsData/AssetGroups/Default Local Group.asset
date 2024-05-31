@@ -27,14 +27,21 @@ MonoBehaviour:
     m_Address: Assets/map prefab
     m_ReadOnly: 0
     m_SerializedLabels:
-    - environment
-    - map2
+    - default
+    - map3
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fd2dc0b8cf22b2f488bca70f6702ff48
     m_Address: Assets/environment.prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - environment
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 587cb54e8d4e40942855ca8eea68554e
+    m_Address: Assets/map prefab/map3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    - map3
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 840639009827e7e448ab57deb3fc2b06, type: 2}
